@@ -29,6 +29,10 @@ class AddonsController extends Controller{
 	protected $addons = null;
 
 	public function execute($_addons = null, $_controller = null, $_action = null){
+		/*var_dump($_addons);
+		var_dump($_controller);
+		var_dump($_action);
+		exit;*/
 		if(C('URL_CASE_INSENSITIVE')){
 			$_addons = ucfirst(parse_name($_addons, 1));
 			$_controller = parse_name($_controller,1);
